@@ -1,0 +1,21 @@
+.search-input {
+  height: 10px;
+  width: 20%;
+  position: fixed;
+  margin: 20px;
+  z-index: 100;
+  left: 15px;
+}
+.ant-select {
+  width: 100% !important;
+
+}
+.ant-select-selector {
+  width: 100% !important;
+  height: 50px !important;
+  align-items: center;
+}
+.ant-select-selection-search input {
+  height: 50px !important;
+  align-items: center;
+}

@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { Wrapper } from "@googlemaps/react-wrapper";
+import { Content } from 'antd/lib/layout/layout';
+
+import MapContainer from './components/Map/MapContainer';
+import SearchInput from "./components/SearchInput/SearchInput";
+
 import './App.css';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchInput />
+      <Content>
+        <Wrapper apiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
+          <MapContainer />
+        </Wrapper>
+      </Content>
     </div>
   );
 }
